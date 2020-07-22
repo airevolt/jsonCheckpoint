@@ -56,14 +56,13 @@ public class JsonController {
     public String total(@RequestBody List<Movie> movies) {
         double grossTotal = 0;
         for (int i = 0; i < movies.size(); i++) {
-            movies.get(i) = new Movie();
+
             grossTotal += movies.get(i).getGross();
         }
 
 
-//    return String.valueOf(grossTotal);
+   return String.valueOf(grossTotal);
 
-        return movies.get(0).getDescription();
 
     }
 }
